@@ -1,1 +1,229 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{sectsty}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\pagestyle{plain}
+\renewcommand{\baselinestretch}{1.25}
+\usepackage[hyphens]{url}
+\usepackage [english]{babel}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex, hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{sectsty} % para cambiar la fuente de las secciones
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{exscale, relsize}
+\usepackage[caption = false]{subfig}
+\usepackage[a4paper,top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage{epstopdf}
+\usepackage[titletoc,toc,page]{appendix}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[usenames]{color}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage{natbib}
+\newcommand{\e}[1]{{\mathbb E}\left[ #1 \right]}
+
+\renewcommand\labelitemi{--} % Para que el itemize tenga tildes
+
+\usepackage{hyperref}
+\newcommand{\footremember}[2]{%
+    \footnote{#2}
+    \newcounter{#1}
+    \setcounter{#1}{\value{footnote}}%
+}
+\newcommand{\footrecall}[1]{%
+    \footnotemark[\value{#1}]%
+} 
+
+\begin{document}
+
+\begin{titlepage}
+	
+	\begin{center}
+		
+	\centering
+	{\scshape\Large\textbf{Gender wage gaps in Latin America and the Caribbean: new evidence for a persistent (or exacerbated) inequality}\par}
+	
+	\vspace{3cm}
+	
+	{\scshape \normalsize César Edinho del Pozo Loayza}\par
+	\vspace{0.5cm}
+	Pontificia Universidad Católica del Perú
+	
+	\vspace{1.5cm}
+	{\scshape \normalsize Draft version: June XX, 2023\par}
+	
+	\vspace{1.5cm}
+	Abstract:	
+	\end{center}
+	This study aims to estimate the empirical relevance of both observable and unobservable determinants of gender wage gaps for a sample of eigth Latin American and Caribbean countries between 2018 and 2022. Our sample includes countries with a high (Chile, Colombia, Mexico, Peru and Dominican Republic), moderate (Argentina and Brazil) and low (Costa Rica)  levels of gender wage gaps. Using harmonized  households surveys and Quantile Decomposition method with sample selection correction.
+
+	\vspace{1.5cm}
+
+	JEL codes: \textit{C21, J31, J71, Z31}
+	
+	Keywords: \textit{Gender wage gap, quantile decomposition, sample selection, LAC}
+		
+\end{titlepage}
+\clearpage
+
+\section{Introduction}
+The gender labor inequality is a concern salient in both developed and developing countries worlwide. Policy decision-makers generally agree that reducing gender inequality in the labor markets is a policy priority according to the United Nations Sustainable Develpoment Goal 5.  For Latin America and the Caribbean, \textcolor{blue}{\cite{Nopo_2012}} and  \textcolor{blue}{\cite{Urquidi_2023}} shows that in recent decades woman have increased their access to education; however, still face challenges in terms of labor participation and wage gaps. According to World Bank labor statisics for Latin American and the Caribbean (2022), labor participación is still different between women (57.2\%) and men (80.6\%) atributed mainly to inadequate job training, asymmetry in chidlcare responsabilities, and traditional attitudes toward gender roles. In addition, women earn on average 14\% less per hour than man, that gap has remained stable over last years or exacerbate due the COVID-19 pandemic, become gender wage gap as a persitent inequality issue. In detail, the group of countries in Latin America and the Caribbean with a high gender wage gap includes: Honduras (-48.6\%), Venezuela (-32.3\%), Peru (-30\%), Dominican Republic (-24\%), El Salvador (-23.6\%), Mexico (-20.2\%), Bolivia (-16\%), Chile (-13.1\%), Ecuador (-12.9\%), and Paraguay (-12.6\%). A second group of countries has a moderate wage gap: Uruguay (-8.3\%), Brazil (-7.7\%), Colombia (-6.2\%), Panama (-5.6\%), and Argentina (-4.1\%). Finally, the third group contains countries with a positive wage gap: Costa Rica (1.7\%), Guatemala (5.6\%), and Nicaragua (6.2\%). 
+
+A large body of empirical evidence suggests that the gender wage gap cannot be explained by factors like education or experience, the pay gap persists even when women have better professional profiles, so we assume it is related to regulatory factors, biases, and/or discrimination. Conceptually, gender wage gaps can be explained by both observable and unobservable determinants. The former is related with productivity differences between men and women, this differences are based on human capital endowments such as education,  labor market experience, and other skills. According to the Theory of Human Capital \textcolor{blue}{\citep{Becker_2009}}, if there are differences between workers in terms of educational attainment, specific labour training, or work experience, it is expected that there will also be disparities in observable productivity, and consequently differences in wages. In contrast, the unobservable determinants behind wage gaps represent differences in employers' valuation of human capital endowments (differences in the characteristics' returns). \textcolor{blue}{\cite{England_2010}}, argue that unobservable determinant generate wage disparities attributable, in part, to labor discrimination against women.
+
+According to \textcolor{blue}{\cite{Carrillo_2013}}, like others areas around the world, for labor markets in Latin America and the Caribbean, a part of gender wage gaps can be explained by labor discrimination patterns against women. Labor discrimination may refers to the fact that women in the labor market with similar levels of human capital are paid differently because their labor characteristics have low returns. Particullary,  across the wage distribution labor discrimination can be explained by two patterns: sticky floor and glass ceiling. The sticky floor implies that women's participation in organizations concentrates in support tasks, where they are "stagnat" in lower-level jobs with precarious working conditions, limited labour mobility, job promotion barriers. This pattern can be more evident in the lowest quantiles of the wage distribution \textcolor{blue}{\citep{Guy_1994}}. Meanwhile, the glass ceiling accounts for gender gaps at the highest wage levels that cannot be explained by labor characteristics, which suggests the existence of discrimination as an unobservable barrier that limits women's progress and job promotion, affecting those highly qualified and tenured \textcolor{blue}{\citep{Cotter_2001}}. 
+
+Latin America countries were most affected in terms of deaths due COVID-19, recent evidence for this region suggest that the  pandemic can exacerbate gender inequalities in the labor markets. For instance, \textcolor{blue}{\cite{Viollaz_2022}} shows that that the pandemic has negatively affected the labor market status of both men and women, but that the effect is significantly stronger for women, magnifying the already large gender gaps that characterize Latin America and Caribbean countries. In the same way, \textcolor{blue}{\cite{Berniell_2023}} argues that asymmetry in childcare responsibilities is one of the main reasons behind gender gaps in the labor market, found that in the context of the COVID-19 pandemic, women with children were more likely to stay home during school closures, and therefore the ability to work from home was crucial for them to keep their jobs.
+
+This study aims to estimate the empirical relevance of both observable and unobservable determinants of gender wage gaps for a sample of eigth Latin American and Caribbean countries between 2018 and 2022. In our sample we include countries with a high (Chile, Colombia, Mexico, Peru and Dominican Republic), moderate (Argentina and Brazil) and low (Costa Rica)  levels of gender wage gaps. This sample of countries allow us to explore a more complete overview of the gender wage gaps whitin Latin America and the Caribbean region and recover a mixed contextual framework. 
+
+Using harmonized household surveys and quantile regression methods with sample selection correction, this paper contributes to the existing literature studying the gender wage gaps in Latin American by accounting for heterogeneity across the wage distribution and correcting for sample selection bias generated by the differences in the  labor market participation between women and men. Previous papers have measured the gender wage gap for a large sample of Latin American and Caribbean countries do not account for sample selection, therefore their estimations can be potentially affected by sample selection bias (\textcolor{blue}{\cite{Carrillo_2013}}; \textcolor{blue}{\cite{Urquidi_2023}}). According to  \textcolor{blue}{\cite{Siravegna_2021}}, due that female labor participation is an endogenous choice, working women are a selected sample, and if selection is ignored, the gender wage gap may underestimate the relevance of both observable and unobservable determinants.
+
+Another contribution of this article resides to extend the related literature about the determinants of gender wage gaps before and during COVID-19 pandemic to explore if pandemic may exacebated gender wage gaps in Latin American and the Caribbean countries. This evidence is relevant to promote a more consolidated model of gender equality, where a reduction of gender wage gaps can contribute to reduce the overall income inequallity. According to \textcolor{blue}{\cite{Lakner_2015}}, after Sub-Saharian Africa, Latin American and the Caribbean region is the most unequal region around the world.
+
+The rest of the paper is structured as follows: Section 2 briefly summarized the related literature. Section 3, shows thehypotheses, describes the data and variables and details the empirical methodology. Section 4 presents the empirical results and its discussion and Section 5 is the conclusions. 
+
+\section{Literature Review}
+
+Empirically, gender wage gaps have been typically analyzed using gap decompositions at the mean, following the Oaxaca-Blinder methodology proposed by \textcolor{blue}{\cite{Oaxaca_1973}} and \textcolor{blue}{\cite{Blinder_1973}}. For Latin America and the Caribbean, \textcolor{blue}{\cite{Atal_2009}}, in one hand offers a deeply literature review about gender wage gaps for 18 countries of Latin America and the Caribbean, includes studies published between 1992 and 2008. On the other hand, extend the literature using matching comparison methods as a non-parametric extension of the Oaxaca-Blinder methodology. Authors found that mean earn between 9\% and 27\% more than the average female, with high cross-country heterogeneity, the unexplained wage gap is higher among the older, informal, self-employed and those workers in small firms. 
+
+In addition, \textcolor{blue}{\cite{Panizza_2005}} using data from harmonized household surveys for 12 countries of Latin America and the Oaxaca-Blinder methodology explore the gender wage gaps between the public and private sectors and how the sector of employment affects the gender wage gap. Authors found that in the majority of Latin American countries, there is a premium associated with working in the public sector. It is also found that the premium is often higher for women than for men but that this difference does not compensate for the wide gender gap.
+
+Also using a Blinder-Oaxaca at the mean level, \textcolor{blue}{\cite{Urquidi_2023}} found evidence of a significant difference in hourly earnings between mean and women in most of 18 countries in Latin America and the Caribbean. The earnings gap favoring men is therefore due to factors that are not explained by the variables used in this study and are rather due to unobservable characteristics associated with discriminatory gender biases. These biases may be cognitive or rooted in poorly designed laws, discrimination, or labor costs related to child-rearing that are overlooked by society.
+
+All of these previous studies adopt a single measure at the wage mean level. However, the gender wage gap can vary significantly across the wage distribution. Recent literature has taken a step forward to study gender wage gaps in the whole wage distribution. Those methods were systematized in \textcolor{blue}{\cite{Fortin_2011}}. 
+
+Quantile decomposition methods and the identification of labor discrimination patterns had used for particular country study cases, for instance by \textcolor{blue}{\cite{Albrecht_2009}} for The Netherlands, \textcolor{blue}{\cite{Chzhen_2011}} for UK, \textcolor{blue}{\cite{Ge_2011}} for Hong Kong, \textcolor{blue}{\cite{Agrawal_2013}} and \textcolor{blue}{\cite{Duraisamy_2016}} for India,  \textcolor{blue}{\cite{Hara_2018}} for Japan, \textcolor{blue}{\cite{Maasoumi_2019}} for US, \textcolor{blue}{\cite{Biewen_2020}} for Germany.
+
+For Latin American countries, \textcolor{blue}{\cite{Badel_2010}} employ quantile regression techniques to examine the degree to which current small differences in the distribution of observable characteristics can explain the gender gap. We find that the gap is largely explained by gender differences in the rewards to labor market characteristics and not by differences in the distribution of characteristics. We claim that Colombian women experience both a glass ceiling effect and also a sticky floor because gender differences in returns to characteristics primarily affect women at the top and the bottom of the distribution
+
+Using data from harmonized household surveys for 12 countries of Latin America and unconditional quantile decomposition methods (RIF functions) \textcolor{blue}{\cite{Carrillo_2013}}, found evidence of sticky floors and glass ceilings labor discrimination patterns, the former are more frequent and their magnitude is generally larger. Working women are more educated than working men all along the wage distribution, which partially hides the unexplained pay difference; however, these resuls can be potentially affected by sample selection bias. 
+
+More recently, \textcolor{blue}{\cite{Siravegna_2021}} analyze the gender wage gap across the wage distribution in Chile, using a quantile regression, sample selection correction \textcolor{blue}{\citep{Arellano_2017}},   and the Machado-Mata decomposition \textcolor{blue}{\citep{Machado_2005}}, the author found that gender wage gap is explained by differences in rewards for observable labor market characteristics and not by differences in the distribution of those characteristics.    
+
+\section{Methodology}
+
+\subsection{Hypotheses}
+
+The aims of this study can be summarized by the following hypotheses:
+
+\textit{Hypothesis 1}: The gender wage gap in most Latin and Caribbean countries is mainly determined by unobserved component, explained because women's labor characteristics have low returns in the labor markets.
+
+\textit{Hypothesis 2}: Gender wage gaps  in most Latin and Caribbean countries was exacerbated due to COVID-19 pandemic. 
+
+\subsection{Data and Variables}
+
+International comparability can be carried out either between countries with a homogeneous economic structure and relatively equal level of economic development or between different
+groups of countries. Obviously, the latter case is much more complicated and demands a special set of international uniform measures which should satisfy all participants in such an exercise.
+Moreover, not all statistical indicators can be directly compared, even though they may have similar names (e.g. employment measured through an LFS which includes (country “a”) or excludes
+(country “b”) persons in informal employment or employment in the informal sector of the tourism labour market). Another example is unemployment data from Employment Office. Due the legal
+differences and relevant regulations, it is hardly feasible to arrive at internationally comparable estimates of registered unemployment rates.
+It should be noted that in practice, it is very difficult, to achieve a perfect cross-country comparability. The matter is that even with a perfect match of definitions, sources, questions,
+timing of the statistical observations and the statistical measurement framework, there will still remain differences due to sampling and non-sampling errors, non-response rates, individual
+perception of questions and a number of other factors. Given that, the ultimate objective of a comparative exercise should be arriving at reasonably comparable and consistent estimates,
+i.e. achieving an overall cross-country comparability.
+
+This study employ data from harmonized households surveys of eight countries of LAC countries:  Mexico, Argentina, Brazil, Dominican Republic, Chile, Peru, Colombia, and Costa Rica. The data come from country population surveys that folllow a harmonized methodology by \textcolor{blue}{\cite{Cedlas_2015}}\footremember{4}{In Appendices 1 is described the harmonization process and the construction of comparable variables}. National households surveys are not standardized for all LA countries. The harmonization process is based on similar definitions of variables in each country, year and the application of consistent data processing methods. Despite its limitations, households surveys provide valuable information, being the most reliable source, among those available, to generate representative statistics of the population. Description on the data sources is provide in the Table 1. In the Appendices we describe the framework for the harmonization process.
+
+\begin{table}[h!] \caption{Latin America and Caribbean countries: National Household Surveys}
+	\centering
+	\scalebox{0.65}{
+		\begin{tabular}{l c c c c}
+			\toprule
+			\midrule
+			\addlinespace
+			Country&GWG&Household-survey&Coverage&Years\\
+			\midrule
+			Mexico&High&Encuesta Nacional de Ingresos y Gastos de Hogares (ENIGH)&National&2018-2021\\
+			Argentina&Moderate&Encuesta Permanente de Hogares (EPH)&Urban&2018-2021\\
+			Brazil&Moderate&Pesquisa Nacional por Amostra de Domicilios (PNADC)&National&2018-2021\\
+			Dominican Republic&High&Encuesta Nacional de Fuerza de Trabajo (ENFT)&National&2018-2021\\
+			Chile&High&Encuesta de Caracterización Socioeconómica Nacional (CASEN)&National&2018-2021\\
+			Peru&High&Encuesta Nacional de Hogares (ENAHO)&National&2018-2021\\
+			Colombia&High&Gran Encuesta Integrada de Hogares (GEIH)&National&2018-2021\\
+			Costa Rica&Low&Encuesta Nacional de Hogares (ENAHO)&National&2018-2021\\
+			\bottomrule
+		\end{tabular}
+	}
+	\bigskip\\
+	\raggedright \scriptsize GWG: Level of gender wage gap\\
+	\raggedright \scriptsize Source: \textcolor{blue}{\cite{Cedlas_2015}}\\
+\end{table}
+
+\subsection{Copula-based approach for quantile sample selection models}
+
+\subsection{The Machado and Mata quantile decomposition}
+
+\clearpage
+
+\bibliographystyle{apalike}
+\bibliography{biblio_gwg_lac_all_sectors}
+
+\clearpage
+
+\begin{appendices}
+
+Appendice 1: Harmonization process and construction of comparable variables among Latin American countries
+
+
+
+In the process of LAS reconciliation of data from different sources, the following four stages are distinguished:
+
+1. Harmonisation whereby the differences in definitions, etc. are removed. Source data are adjusted in such a way that for each variable data according to one single definition becomes
+available. The same can be said about differences in classification and level of detail; 
+
+2. Completion whereby full coverage is reached by using data from various sources. Sometimes estimation procedures are needed;
+
+3. Minimisation of measurement errors whereby the source data are adjusted in such a way that measurement errors are eliminated as far as possible. This stage can be characterised as
+“an organised hunt for errors”, by confronting countries from different sources; and 
+
+4. Balancing whereby the discrepancies which still remain after the first three stages are eliminated by a balancing method. Sometimes balancing is done “manually”, sometimes
+mathematical procedures are used (e.g. a Lagrange minimisation procedure). Usually, an element of judgement is needed in making the balancing decisions: which data sources
+must be adjusted mostly depends on judgements on the relative accuracy of the various sources. When relations between various variables exist, judgements are needed on which
+variables are measured most accurately.
+
+Similarly with the LAS integration procedure, the OECD EM process of statistical integration or reconciliation has the following four steps:
+
+1. Harmonisation: adjustments for differences in definitions, classifications, time of surveying and level of detail. This also means that beforehand a set of core definitions has to be
+defined (TSA/SNA-concepts), because that is the goal to aim at. For example, this is done by bringing the tourism-related employment data of a labour force survey in accordance with
+the definitions and classifications set in the employment module. Some main questions are: does everybody (people employed/jobs) in the data set fit the definitions and classifications
+of the employment module; should groups be excluded or should groups be added; and are people employed/jobs assigned to the proper classification? 
+
+2. Full or identical coverage: adjustments for differences in coverage, because the different sources of information often do not describe the total or same population, for example only
+employees. So, the main question is: are there any groups left out who fit the definition of the employment module but who are not in the basic source of information, which is used?
+
+3. Minimisation of measurement errors: corrections for measurement errors. Data from different sources of information are confronted with one another and measurement errors
+are eliminated as much as possible. This is an organised search, for which a top-down analysis is the most effective. Possibilities are, for example, benchmarking (totals) with other
+available sources; using interrelationships between variables; and comparison with figures of previous periods. If consistency does not hold than one or more variables probably suffer
+from measurement errors, comprising sampling, as well as non-sampling errors. The main question is: is the data internally and externally consistent, also in conjunction with other
+sources and identities?
+
+4. Balancing: if only one basic source of information is used then this step can be skipped. If, however, more than one source is used, for example using a labour force and industry
+survey to determine the number of jobs of employees, than this step of balancing has to be applied. Even after the first three steps, there will be (small) differences between sources of
+information. The total reconciliation can then be achieved by using some kind of mathematical balancing algorithm, at least as long as the differences are not too big. This step could also be
+used if employment data is derived separately through National Accounting and through the employment module. In this case a better alternative is to set the TSA totals as target totals
+and reweigh the totals derived through the integration process of the employment module to these TSA-totals. Otherwise, at least in the case of the compensation of employees, this
+could even lead to the adjustment of tourism GDP in the TSA.
+
+The sample includes individuals that live in urban areas and who report to working at least one hour in the week preceding the survey. Is include individuals working in the tourism sector, workers in tourism are defined as those that are employed in the following economic activities: hospitality services, gastronomy and food services, travel agencies, and cultural, sports, and entertainment services. However, the sample exclude from the sample individuals younger than 14 and older than 65 years old to exclude for educational and retirement decisions.
+
+The main outcome in this study is male and female hourly-wages differential measured at constant US prices of 2018. the sample also include information of educational attainment, working experience (proxied by age), marital status, number of children aged 5 or less that live in the household, number of adults aged more than 65 years old that live in the household, migrant status. Furthermore, sample include covariables related with labor informality (worker has permanent contract, retirement discount or social insurance). 
+	
+\end{appendices}
+
+\end{document}
 
